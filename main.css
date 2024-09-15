@@ -1,0 +1,336 @@
+
+ .animation-container{
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+ }
+
+
+/** Animated  button -  moves smoothly and increases size when hoover */
+.smooth-button {
+    margin: 40px;
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.9s ease;
+  }
+  
+  .smooth-button:hover {
+    background-color: #2980b9;
+    transform: scale(1.1);
+  }
+
+  /** Animated  box -  moves right and left awhile changing color */
+  
+  .animated-box {
+    margin: 40px;
+    width: 100px;
+    height: 100px;
+    background-color: #e74c3c;
+    animation: moveAndColor 2s infinite;
+  }
+  
+  @keyframes moveAndColor {
+    0% {
+      transform: translateX(0);
+      background-color: #f54a9f85;
+    }
+    50% {
+      transform: translateX(200px);
+      background-color: #e2f10f;
+    }
+    100% {
+      transform: translateX(0);
+      background-color: #e73cd0;
+    }
+  }
+
+  /* Pulse Animation */
+  .pulse {
+    width: 100px;
+    height: 100px;
+    background-color: #9b59b6;
+    border-radius: 50%;
+    margin: 10px;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Bounce Animation */
+.bounce {
+    width: 100px;
+    height: 100px;
+    background-color: #e74c3c;
+    margin: 10px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-150px);
+    }
+    60% {
+        transform: translateY(-75px);
+    }
+}
+
+/* Slide-in from the Left - This animation makes the element slide in from the left. */
+.slide-in-left {
+    width: 100px;
+    height: 100px;
+    background-color: #1abc9c;
+    margin: 10px;
+    animation: slideInLeft 1s ease-out;
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Fade In and Out */
+.fade-in-out {
+    width: 100px;
+    height: 100px;
+    background-color: #f39c12;
+    margin: 10px;
+    animation: fadeInOut 2s infinite;
+}
+
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+/* Rotate Animation - This makes the element continuously rotate. */
+.rotate {
+    width: 100px;
+    height: 100px;
+    background-color: #e67e22;
+    margin: 10px;
+    animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Shake Animation - This simulates a shaking effect, perfect for error notifications. */
+.shake {
+    width: 100px;
+    height: 100px;
+    background-color: #34495e;
+    margin: 10px;
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+/* Flip Animation - A smooth 3D flip animation. */
+.flip {
+    width: 100px;
+    height: 100px;
+    background-color: #2ecc71;
+    margin: 10px;
+    animation: flip 1.5s infinite;
+}
+
+@keyframes flip {
+    0% {
+        transform: perspective(400px) rotateY(0);
+    }
+    50% {
+        transform: perspective(400px) rotateY(180deg);
+    }
+    100% {
+        transform: perspective(400px) rotateY(360deg);
+    }
+}
+
+/* Additional styling */
+.animation-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Color Change Animation - This animation gradually changes the background color of an element.*/
+
+.color-change {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    animation: colorChange 3s infinite;
+}
+
+@keyframes colorChange {
+    0% {
+        background-color: #3498db;
+    }
+    50% {
+        background-color: #9b59b6;
+    }
+    100% {
+        background-color: #3498db;
+    }
+}
+
+/* Color Change Animation - This animation gradually changes the background color of an element.*/
+
+.color-change {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    animation: colorChange 3s infinite;
+}
+
+@keyframes colorChange {
+    0% {
+        background-color: #3498db;
+    }
+    50% {
+        background-color: #9b59b6;
+    }
+    100% {
+        background-color: #3498db;
+    }
+}
+
+/* Zoom In & Out -  This animation zooms in and out of an element.*/
+
+.zoom-in-out {
+    width: 100px;
+    height: 100px;
+    background-color: #2ecc71;
+    animation: zoomInOut 2s infinite;
+}
+
+@keyframes zoomInOut {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+}
+
+/*Glowing Border - This style gives an element a glowing border effect. */
+
+.glowing-border {
+    width: 100px;
+    height: 100px;
+    background-color: #8e44ad;
+    border: 5px solid;
+    border-color: rgba(255, 255, 255, 0.6);
+    animation: glowing 1.5s infinite;
+}
+
+@keyframes glowing {
+    0% {
+        border-color: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+    }
+    50% {
+        border-color: rgba(255, 255, 255, 1);
+        box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+    }
+    100% {
+        border-color: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+    }
+}
+
+/*Skew Animation - Skews an element back and forth. */
+.skew {
+    width: 100px;
+    height: 100px;
+    background-color: #f39c12;
+    animation: skewEffect 1.5s infinite;
+}
+
+@keyframes skewEffect {
+    0% {
+        transform: skew(0deg);
+    }
+    50% {
+        transform: skew(20deg);
+    }
+    100% {
+        transform: skew(0deg);
+    }
+}
+
+
+/*Ripple Effect - This animation makes an element appear as though it has a ripple effect. */
+
+.ripple {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.ripple::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.6);
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    animation: rippleEffect 1s infinite;
+}
+
+@keyframes rippleEffect {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(2);
+        opacity: 0;
+    }
+}
